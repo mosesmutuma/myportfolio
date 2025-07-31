@@ -24,6 +24,7 @@ urlpatterns = [
     path('', include('portfolio.urls')),  # Include the portfolio app URLs
 ]
 
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
+# Serve media during development and on Render (for now)
+if settings.DEBUG or os.environ.get('RENDER'):
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
