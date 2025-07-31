@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Portfolio{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+</head>
+<body class="bg-gradient-to-br from-slate-100 via-blue-50 to-slate-200 text-gray-900 font-[Oswald] min-h-screen" style="background-image: url('{% static 'images/bg3.jpg' %}');">
+
+    <!-- Header / Navbar -->
+    <header class="bg-blue-600 shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="{% url 'home' %}" class="text-2xl font-bold text-white hover:text-yellow-300 transition duration-200">
+            Moses Mutuma
+        </a>
+        <nav class="flex space-x-6 text-white text-lg">
+            <a href="{% url 'about' %}" class="inline-block transform transition-transform hover:scale-110 hover:text-yellow-300 duration-200">
+                About
+            </a>
+            <a href="{% url 'resume' %}" class="inline-block transform transition-transform hover:scale-110 hover:text-yellow-300 duration-200">
+                Resume
+            </a>
+            <a href="{% url 'projects' %}" class="inline-block transform transition-transform hover:scale-110 hover:text-yellow-300 duration-200">
+                Projects
+            </a>
+            <a href="{% url 'contact' %}" class="inline-block transform transition-transform hover:scale-110 hover:text-yellow-300 duration-200">
+                Contact
+            </a>
+        </nav>
+    </div>
+</header>
+
+
+    <!-- Main Content -->
+    <main class="max-w-3xl mx-auto p-6 mt-6 bg-white rounded-2xl shadow-lg">
+        {% block content %}
+        <!-- Page-specific content will be injected here -->
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+<footer class="bg-white/5 backdrop-blur-md text-white py-6 mt-20 shadow-inner border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+
+    <!-- Left: Brand -->
+    <div class="text-xl font-semibold tracking-wide">
+      Moses Mutuma
+    </div>
+
+    <!-- Center: Navigation -->
+    <div class="flex gap-6 text-sm font-medium">
+      <a href="{% url 'home' %}" class="hover:text-white transition">Home</a>
+      <a href="{% url 'about' %}" class="hover:text-white transition">About</a>
+      <a href="{% url 'projects' %}" class="hover:text-white transition">Projects</a>
+      <a href="{% url 'resume' %}" class="hover:text-white transition">Resume</a>
+      <a href="{% url 'contact' %}" class="hover:text-white transition">Contact</a>
+    </div>
+     {% now "Y" as current_year %}
+    <!-- Right: Year -->
+    <div class="text-sm text-gray-400">&copy; {{ current_year }} All rights reserved.</div>
+    
+  </div>
+</footer>
+
+
+
+</body>
+</html>

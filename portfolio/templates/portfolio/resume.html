@@ -1,0 +1,136 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block title %}Resume{% endblock %}
+
+{% block content %}
+<section class="space-y-12 bg-slate-50 p-6 rounded-2xl shadow-lg border border-slate-200">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center border-b pb-4">
+        <h2 class="text-3xl font-bold text-blue-800 flex items-center gap-2">
+            <i class="ph ph-user-circle text-blue-600 text-3xl"></i> Resume
+        </h2>
+        <a href="/media/resume.pdf" target="_blank"
+           class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg shadow">
+            <i class="ph ph-download-simple mr-2"></i>Download PDF
+        </a>
+    </div>
+
+    <!-- Profile -->
+    <div class="bg-white p-6 rounded-2xl shadow-lg border">
+        <h3 class="text-xl font-semibold mb-2 text-gray-800">Mutuma Moses</h3>
+        <p class="text-gray-600">Information Technologist | 📍 Thika, Kiambu</p>
+        <div class="text-sm text-gray-500 mt-1 space-y-1">
+            <p><i class="ph ph-envelope mr-2 text-blue-500"></i> mosesmutuma709@gmail.com</p>
+            <p><i class="ph ph-phone mr-2 text-blue-500"></i> +254 757 138 067</p>
+        </div>
+        <p class="mt-4 text-gray-700 leading-relaxed">
+            As an enthusiastic and detail-oriented IT professional, my career objective is to leverage my knowledge in information technology to support, maintain, and improve organizational systems and processes. I aim to contribute to the efficiency and security of IT infrastructure while continually learning and adapting to emerging technologies.
+        </p>
+    </div>
+
+    <!-- Skills -->
+    <div class="bg-white p-6 rounded-2xl shadow-lg border">
+        <h4 class="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2">
+            <i class="ph ph-toolbox text-blue-600 text-xl"></i> Skills
+        </h4>
+        <ul class="grid grid-cols-2 md:grid-cols-3 gap-y-2 list-disc list-inside text-gray-700">
+            <li>Troubleshooting</li>
+            <li>Network setup</li>
+            <li>MS Office</li>
+            <li>Linux & Windows</li>
+            <li>Software installation</li>
+            <li>Technical support</li>
+            <li>Good communication</li>
+            <li>Problem-solving</li>
+            <li>Time management</li>
+            <li>Teamwork</li>
+        </ul>
+    </div>
+
+    <!-- Education -->
+    <div class="bg-white p-6 rounded-2xl shadow-lg border">
+        <h4 class="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2">
+            <i class="ph ph-graduation-cap text-blue-600 text-xl"></i> Education
+        </h4>
+        <ul class="space-y-2 text-gray-700">
+            <li>
+                <strong>Mount Kenya University</strong><br>
+                BSc. Information Technology (2019–2023)
+            </li>
+            <li>
+                <strong>St. Paul’s High School</strong><br>
+                KCSE, Grade B− (2015–2018)
+            </li>
+        </ul>
+    </div>
+
+    <!-- Experience -->
+    <div class="bg-white p-6 rounded-2xl shadow-lg border">
+        <h4 class="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2">
+            <i class="ph ph-briefcase text-blue-600 text-xl"></i> Work Experience
+        </h4>
+        <ul class="space-y-4 text-gray-700">
+            <li>
+                <strong>FAIBANET Cyber, Thika</strong> – Cyber Attendant (Jan 2024 – Apr 2025)
+                <ul class="list-disc list-inside ml-5 text-sm">
+                    <li>Resolved 30+ customer issues monthly</li>
+                    <li>95% system uptime through support</li>
+                    <li>Software installations and upgrades</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Twiga Foods Ltd</strong> – Sales Agent (Nov 2023 – Dec 2023)
+                <ul class="list-disc list-inside ml-5 text-sm">
+                    <li>25% sales increase in 2 months</li>
+                    <li>Expanded customer base by 15%</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Equity HQ</strong> – Dividend Clerk (Jun 2023 – Aug 2023)
+                <ul class="list-disc list-inside ml-5 text-sm">
+                    <li>Printed and dispatched cheques with 99% accuracy</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Maua Methodist Hospital</strong> – ICT Attachee (Jun 2022 – Aug 2022)
+                <ul class="list-disc list-inside ml-5 text-sm">
+                    <li>Installed and maintained IT/CCTV infrastructure</li>
+                    <li>Designed wireless network backbone</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Languages -->
+    <div class="bg-white p-6 rounded-2xl shadow-lg border">
+        <h4 class="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2">
+            <i class="ph ph-chat-circle-text text-blue-600 text-xl"></i> Languages
+        </h4>
+        <p class="text-gray-700">English (Fluent), Swahili</p>
+    </div>
+
+    <!-- References -->
+    <div class="bg-white p-6 rounded-2xl shadow-lg border">
+        <h4 class="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2">
+            <i class="ph ph-users-three text-blue-600 text-xl"></i> References
+        </h4>
+        <ul class="space-y-3 text-gray-700">
+            <li>
+                <strong>Mr. David Babengi</strong> – Manager, Legal Dept, Equity<br>
+                📞 +254 725 242171
+            </li>
+            <li>
+                <strong>Dr. John Kamau</strong> – Dean, MKU<br>
+                📧 jkamau@mku.ac.ke | 📞 +254 701 851 333
+            </li>
+            <li>
+                <strong>Mr. Philip Chabari</strong> – Manager C&F, Equity Bank<br>
+                📧 philip.chabari@gmail.com | 📞 +254 763 649 869
+            </li>
+        </ul>
+    </div>
+
+</section>
+{% endblock %}
