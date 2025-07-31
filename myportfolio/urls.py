@@ -19,13 +19,10 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 import os
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('portfolio.urls')),  # Include the portfolio app URLs
 ]
 
-
-# Serve media during development and on Render (for now)
 if settings.DEBUG or os.environ.get('RENDER'):
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
