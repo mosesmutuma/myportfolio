@@ -4,7 +4,7 @@
 {% block title %}About Me{% endblock %}
 
 {% block content %}
-<section class="flex flex-col lg:flex-row gap-10 items-start">
+<section class="flex flex-col lg:flex-grid gap-10 items-start">
 
     <!-- Image (Optional) -->
 <div class="w-full max-w-xs md:max-w-md lg:max-w-lg mx-auto">
@@ -12,12 +12,11 @@
          alt="Mutuma Moses"
          class="rounded-2xl shadow-lg w-full h-auto object-cover">
              <!-- Second image below -->
-    <img src="{% static 'images/profile1.jpg' %}" alt="Moses Mutuma"
-         class="rounded-2xl shadow-md w-full object-cover">
+
 </div>
 
     <!-- Info -->
-    <div class="w-full md:w-2/3 space-y-6">
+    <div class="w-full md:w-3/3 space-y-5">
         <h2 class="text-3xl font-bold text-gray-800 border-b pb-2">Mutuma Moses</h2>
         <p class="text-gray-700 text-lg leading-relaxed">
             I am a dedicated and goal-driven individual with a strong passion for technology and continuous learning. With a background in Information Technology and hands-on experience in both customer service and technical support roles, I thrive in dynamic environments where problem-solving and innovation are valued. I am committed to personal and professional growth and enjoy taking on new challenges that allow me to contribute meaningfully while expanding my skill set. I value integrity, teamwork, and delivering quality results in everything I do.
@@ -35,18 +34,19 @@
         <h4 class="font-semibold text-blue-600">Location</h4>
         <p class="text-sm text-gray-600">Thika, Kiambu</p>
     </div>
-    <div class="flex-1 min-w-[200px] max-w-full bg-blue-50 p-4 rounded-lg shadow-sm">
+    <div class="flex-1 min-w-[200px] max-w-xs bg-blue-50 p-4 rounded-lg shadow-sm">
         <h4 class="font-semibold text-blue-600">Experience</h4>
         <p class="text-sm text-gray-600">2+ Years</p>
     </div>
-</div>
-
-
-        <div>
-            <a href="{% url 'resume.pdf' %}" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg shadow">
+            <div>
+            <a href="{% url 'resume' %}" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg shadow">
                 View My Resume
             </a>
         </div>
+</div>
+
+
+
     </div>
 
 </section>
